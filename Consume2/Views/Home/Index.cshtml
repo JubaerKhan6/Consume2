@@ -1,0 +1,29 @@
+﻿@using System.Data;
+@model DataTable;
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@Html.DisplayName("Id")</th>
+            <th>@Html.DisplayName("Name")</th>
+            <th>@Html.DisplayName("FirstName")</th>
+            <th>@Html.DisplayName("LastName")</th>
+            <th>@Html.DisplayName("Powers")</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (DataRow row in Model.Rows)
+        {
+        <tr>
+            <td>@row["Id"]</td>
+            <td>@row["Name"]</td>
+            <td>@row["FirstName"]</td>
+            <td>@row["LastName"]</td>
+            <td>@row["Powers"]</td>
+        </tr>
+
+        }
+    </tbody>
+</table>
